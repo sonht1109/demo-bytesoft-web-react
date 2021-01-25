@@ -4,15 +4,15 @@ import homeBg from '../../assets/img/home-group-training.png'
 
 export default function Home() {
     return (
-        <div class="home wrapper">
+        <div className="home wrapper">
             <img src={homeBg} alt="" />
-            <div class="home-content">
-                <div class="wow slideInLeft">
+            <div className="home-content">
+                <div className="wow slideInLeft">
                     XÂY DỰNG WEBSITE TRONG MƠ CỦA BẠN CÙNG
                 </div>
-                <div class="wow slideInRight">Bytesoft jsc</div>
-                <button class="wow pulse" data-wow-iteration="infinite">
-                    <a href="#" style={{color: "white"}}>Xem them</a>
+                <div className="wow slideInRight">Bytesoft jsc</div>
+                <button className="wow pulse" data-wow-iteration="infinite">
+                    <a href="#" style={{color: "white"}}>XEM THÊM</a>
                 </button>
             </div>
         </div>

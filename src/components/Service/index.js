@@ -9,18 +9,16 @@ export default function Service() {
 
   const rightBlockItem = (item) => {
     return (
-      <div class="right-block col-xl-7 col-12 active wow fadeInDown" id="block-1">
-        <div class="right-block-wrapper">
-          <p>{item.name}</p>
-          <span>{item.content[0]}</span>
-          <div class="service-detail">
-            <span>{item.content[1]}</span>
-            <img src={item.contentImg} alt="" />
-          </div>
-          <span>{item.content[2]}</span>
-          <br />
-          <a href="#" class="read-more">XEM THEM</a>
+      <div className="right-block-wrapper">
+        <p>{item.name}</p>
+        <span style={{lineHeight: "24px"}}>{item.content[0]}</span>
+        <div className="service-detail">
+          <span style={{lineHeight: "24px"}}>{item.content[1]}</span>
+          <img src={item.contentImg} alt="" style={{marginLeft: 20}} />
         </div>
+        <span style={{lineHeight: "24px"}}>{item.content[2]}</span>
+        <br />
+        <a href="#" className="read-more">XEM THÊM</a>
       </div>
     )
   }
@@ -28,10 +26,10 @@ export default function Service() {
   const leftBlockItem = (item, i) => {
     return (
       <div
-        class={`block-item ${index === i && 'active'}`}
+        className={`block-item ${index === i && 'active'}`}
         onClick={() => setIndex(i)}
         key={"leftBlock" + i}>
-        <div class="block-img">
+        <div className="block-img">
           <img src={item.inactiveImg} alt="" />
           <img src={item.activeImg} alt="" />
         </div>
@@ -41,108 +39,31 @@ export default function Service() {
   }
 
   return (
-    <div class="service wrapper">
-      <div class="service-content">
-        <div class="top-content">
-          <div class="title">DỊCH VỤ - BYTESOFT</div>
-          <span class="wow fadeInDown">Với tiêu chí "Chất lượng hơn số lượng. ByteSoft luôn tạo ra những sản phẩm có giá
+    <div className="service wrapper">
+      <div className="service-content">
+        <div className="top-content">
+          <div className="title">DỊCH VỤ - BYTESOFT</div>
+          <span className="wow fadeInDown">Với tiêu chí "Chất lượng hơn số lượng. ByteSoft luôn tạo ra những sản phẩm có giá
           trị
           cao nhất". Đến với
               chúng tôi, khách hàng sẽ luôn được cung cấp những dịch vụ tốt nhất</span>
         </div>
-        <div class="service-block">
-        <Container>
-              <Row>
-                <Col xl="5" className="left-block">
-                  {
-                    services.map((item, index) => {
-                      return leftBlockItem(item, index)
-                    })
-                  }
-                </Col>
+        <div className="service-block">
+          <Container className="d-flex justify-content-center align-items-center p-0">
+            <Row>
+              <Col xl="5" className="left-block align-self-center">
+                {
+                  services.map((item, index) => {
+                    return leftBlockItem(item, index)
+                  })
+                }
+              </Col>
 
-                <Col xl="7" className="right-block">
-                  <div class="right-block-wrapper">
-                    {rightBlockItem(services[index])}
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          {/* <div class="container-fluid d-flex justify-content-center align-items-center p-0"> */}
-            {/* <!-- left --> */}
-            {/* <div class="left-block col-xl-5 col-12 wow fadeInLeft">
-              {
-                services.map((item, index) => {
-                  return leftBlockItem(item, index)
-                })
-              }
-            </div> */}
-            {/* <!-- right --> */}
-            {/* <div class="right-block col-xl-7 col-12 active wow fadeInDown" id="block-1">
-              <div class="right-block-wrapper">
+              <Col xl="7" className="right-block">
                 {rightBlockItem(services[index])}
-              </div>
-            </div> */}
-            
-            {/* <!-- block 2 --> */}
-            {/* <div class="right-block col-xl-7 col-12" id="block-2">
-              <div class="right-block-wrapper">
-                <p>LAP TRINH PHAN MEM</p>
-                <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                environment
-                of the fluctuating market, we will minimise your costs and increase your profits. We understand risks
-                    and appreciate your trust. Thus, we offer advice and support your negotiations.</span>
-                <div class="service-detail">
-                  <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                      environment of the fluctuating market, we will minimise your costs and increase your profits.</span>
-                  <img src="assets/img/service-img.png" alt="" />
-                </div>
-                <span>We understand risks and appreciate your trust. Thus, we offer advice and support your
-                    negotiations.</span>
-                <br />
-                <a href="#" class="read-more">XEM THEM</a>
-              </div>
-            </div> */}
-            {/* <!-- block 3 --> */}
-            {/* <div class="right-block col-xl-7 col-12" id="block-3">
-              <div class="right-block-wrapper">
-                <p>BLOCKCHAIN</p>
-                <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                environment
-                of the fluctuating market, we will minimise your costs and increase your profits. We understand risks
-                    and appreciate your trust. Thus, we offer advice and support your negotiations.</span>
-                <div class="service-detail">
-                  <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                      environment of the fluctuating market, we will minimise your costs and increase your profits.</span>
-                  <img src="assets/img/service-img.png" alt="" />
-                </div>
-                <span>We understand risks and appreciate your trust. Thus, we offer advice and support your
-                    negotiations.</span>
-                <br />
-                <a href="#" class="read-more">XEM THEM</a>
-              </div>
-            </div> */}
-            {/* <!-- block 4 --> */}
-            {/* <div class="right-block col-xl-7 col-12" id="block-4">
-              <div class="right-block-wrapper">
-                <p>PHAN MEM GIAO DUC</p>
-                <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                environment
-                of the fluctuating market, we will minimise your costs and increase your profits. We understand risks
-                    and appreciate your trust. Thus, we offer advice and support your negotiations.</span>
-                <div class="service-detail">
-                  <span>Detailed development of out project strategy is very important to us. Even in a volatile
-                      environment of the fluctuating market, we will minimiseimport {services} from './services';
- your costs and increase your profits.</span>
-                  <img src="assets/img/service-img.png" alt="" />
-                </div>
-                <span>We understand risks and appreciate your trust. Thus, we offer advice and support your
-                    negotiations.</span>
-                <br />
-                <a href="#" class="read-more">XEM THEM</a>
-              </div>
-            </div> */}
-          {/* </div> */}
+              </Col>
+            </Row>
+          </Container>
         </div>
       </div>
     </div>

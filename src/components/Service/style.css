@@ -102,22 +102,27 @@
 .service .service-block .left-block .block-item img:nth-child(2) {
   opacity: 0;
 }
-.service .service-block .left-block .block-item.active {
+.service .service-block .left-block .block-item.active,
+.service .service-block .left-block .block-item:hover {
   background-color: var(--main-green);
   border-color: var(--main-green);
   filter: drop-shadow(0px 5px 2.5px rgba(0, 0, 0, 0.2));
   transition: 0.3s all;
 }
-.service .service-block .left-block .block-item.active .block-img {
+.service .service-block .left-block .block-item.active .block-img,
+.service .service-block .left-block .block-item:hover .block-img {
   border-color: white;
 }
-.service .service-block .left-block .block-item.active span {
+.service .service-block .left-block .block-item.active span,
+.service .service-block .left-block .block-item:hover span {
   color: white;
 }
-.service .service-block .left-block .block-item.active img:nth-child(1) {
+.service .service-block .left-block .block-item.active img:nth-child(1),
+.service .service-block .left-block .block-item:hover img:nth-child(1) {
   opacity: 0;
 }
-.service .service-block .left-block .block-item.active img:nth-child(2) {
+.service .service-block .left-block .block-item.active img:nth-child(2),
+.service .service-block .left-block .block-item:hover img:nth-child(2) {
   opacity: 1;
 }
 /* right-block */

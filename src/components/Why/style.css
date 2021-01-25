@@ -1,0 +1,65 @@
+.why {
+  background-image: url("../../assets/img/WHY_bg.png");
+  background-position: top;
+  background-size: cover;
+  margin-top: -80px;
+  flex-direction: column;
+  padding: 0 100px;
+}
+.why .why-detail {
+  max-width: 1200px;
+  max-width: auto;
+}
+.why .why-title {
+  margin-top: 150px;
+}
+.why .why-title p {
+  font-size: 36px;
+  line-height: 9px;
+  color: #444444;
+  font-weight: 700;
+}
+.why .why-title span {
+  font-size: 17px;
+  line-height: 29px;
+  color: #444444;
+  font-weight: 400;
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+.why .why-detail .phone img {
+  max-width: 75%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.why .why-detail .container .col-lg-4:nth-child(1) .why-item img {
+  right: -72px;
+}
+.why .why-detail .container .col-lg-4:nth-child(3) .why-item img {
+  left: -72px;
+}
+.why .why-detail .container .col-lg-4:nth-child(1) .why-item {
+  margin-right: 36px;
+}
+.why .why-detail .container .col-lg-4:nth-child(3) .why-item {
+  margin-left: 36px;
+}
+.why .why-detail .container .col-lg-4:nth-child(1) .why-item span,
+.why .why-detail .container .col-lg-4:nth-child(3) .why-item span {
+  font-size: 17px;
+  color: #23a459;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.why-item {
+  margin: 40px 0;
+}
+.why-item p {
+  line-height: 21px;
+  color: #444444;
+  font-weight: 400;
+  font-size: 14px;
+}
+.why-item .why-item-title {
+  margin-bottom: 30px;
+}
