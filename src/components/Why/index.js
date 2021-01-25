@@ -16,7 +16,7 @@ export default function Why() {
       <div className="why-detail">
         <Container className="p-0">
           <Row>
-            <Col lg="4" className="p-0 justify-content-center flex-column">
+            <Col lg="4" className="p-0 d-flex justify-content-center flex-column">
               <div className="why-item wow fadeInLeft">
                 <div className="why-item-title d-flex flex-lg-row-reverse flex-row position-relative justify-content-start">
                   <img src={whyIcon} className="position-absolute" />
