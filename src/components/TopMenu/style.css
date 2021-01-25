@@ -3,12 +3,15 @@
   padding: 10px 100px;
   color: white;
   font-size: 13px;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
-.top-nav i {
+.top-nav a {
   margin-left: 15px;
 }
 .top-nav-menu {
   list-style: none;
+  margin-left: auto;
 }
 .top-nav-menu li {
   text-transform: uppercase;
@@ -20,6 +23,7 @@
 .top-nav-menu img {
   margin-right: 10px;
 }
+
 select {
   background-color: transparent;
   color: white;
@@ -40,6 +44,8 @@ select option[value="vi"] {
   width: 100vw;
   height: 43px;
   background-color: #1f2732;
+  display: flex;
+  align-items: center;
 }
 nav.navbar {
   filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.07));
@@ -51,6 +57,7 @@ nav.navbar {
 nav.nav-bar .navbar-collapse {
   padding: 30px 0;
   align-items: center;
+  margin-left: auto;
 }
 nav.navbar .collapse .nav-item {
   display: flex;

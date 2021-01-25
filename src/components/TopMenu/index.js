@@ -1,94 +1,92 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
+import dotPng from '../../assets/img/top-nav-dot.png'
+import logo from '../../assets/img/logo.png'
+import { TiSocialFacebook, TiSocialTwitter, TiSocialYoutube, TiSocialInstagram } from 'react-icons/ti'
+import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink} from 'reactstrap'
+import dot from '../../assets/img/dot.png'
 
 export default function TopMenu() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <div class="menu">
+    <div className="menu">
       {/* top nav */}
-      <div class="top-nav d-flex align-items-center">
+      <div className="top-nav">
         <select>
           <option value="en">ENG</option>
           <option value="vi">VI</option>
         </select>
-        <a href="#">
-          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <a href="#" style={{color: "white"}}>
+          <TiSocialFacebook size={20} />
         </a>
-        <a href="#">
-          <i class="fa fa-twitter" aria-hidden="true"></i>
+        <a href="#" style={{color: "white"}}>
+          <TiSocialTwitter size={20} />
         </a>
-        <a href="#">
-          <i class="fa fa-youtube" aria-hidden="true"></i>
+        <a href="#" style={{color: "white"}}>
+          <TiSocialYoutube size={20} />
         </a>
-        <a href="#">
-          <i class="fa fa-google-plus" aria-hidden="true"></i>
+        <a href="#"style={{color: "white"}}>
+          <TiSocialInstagram size={20} />
         </a>
-        <ul class="top-nav-menu d-flex align-items-center ml-auto justify-content-center mb-0">
+        <ul className="top-nav-menu d-lg-flex d-none align-items-center ml-auto justify-content-center mb-0">
           <li>
-            <img src={require("../../../assets/img/top-nav-dot.png")} alt="" />
+            <img src={dotPng} alt="" />
             <span>Chia sẻ Design</span>
           </li>
           <li>
-            <img src="assets/img/top-nav-dot.png" alt="" />
+            <img src={dotPng} />
             <span>Chia sẻ Code</span>
           </li>
           <li>
-            <img src="assets/img/top-nav-dot.png" alt="" />
+            <img src={dotPng} />
             <span>VỆ TINH BLOCKCHAIN</span>
           </li>
           <li>
-            <img src="assets/img/top-nav-dot.png" alt="" />
+            <img src={dotPng} />
             <span>VỆ TINH CODE</span>
           </li>
         </ul>
       </div>
 
       {/* main menu */}
-      <nav class="navbar navbar-expand-md navbar-light bg-white">
-        <a class="navbar-brand" href="#">
-          <img src="assets/img/logo.png" alt="" />
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ml-md-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">TRANG CHỦ</a>
-            </li>
-            <li class="nav-item nav-dot">
-              <img src="assets/img/dot.png" alt="" />
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">VỀ CHÚNG TÔI</a>
-            </li>
-            <li class="nav-item nav-dot">
-              <img src="assets/img/dot.png" alt="" />
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">DỊCH VỤ</a>
-            </li>
-            <li class="nav-item nav-dot">
-              <img src="assets/img/dot.png" alt="" />
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">SẢN PHẨM</a>
-            </li>
-            <li class="nav-item nav-dot">
-              <img src="assets/img/dot.png" alt="" />
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">TIN TỨC</a>
-            </li>
-            <li class="nav-item nav-dot">
-              <img src="assets/img/dot.png" alt="" />
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">LIÊN HỆ</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar style={{display: "flex", alignItems: "center", maxWidth: "100vw", boxSizing: "border-box"}} expand="md">
+        <NavbarBrand href='#'>
+          <img src={logo} alt="" />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav navbar className="d-flex ml-auto">
+            <NavItem>
+              <NavLink href="#">TRANG CHỦ</NavLink>
+            </NavItem>
+            <NavItem><img src={dot} /></NavItem>
+            <NavItem>
+              <NavLink href="#">VỀ CHÚNG TÔI</NavLink>
+            </NavItem>
+            <NavItem><img src={dot} /></NavItem>
+            <NavItem>
+              <NavLink href="#">DỊCH VỤ</NavLink>
+            </NavItem>
+            <NavItem><img src={dot} /></NavItem>
+            <NavItem>
+              <NavLink href="#">SẢN PHẨM</NavLink>
+            </NavItem>
+            <NavItem><img src={dot} /></NavItem>
+            <NavItem>
+              <NavLink href="#">TIN TỨC</NavLink>
+            </NavItem>
+            <NavItem><img src={dot} /></NavItem>
+            <NavItem>
+              <NavLink href="#">LIÊN HỆ</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+
     </div>
   )
 }
