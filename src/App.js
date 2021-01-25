@@ -1,9 +1,10 @@
 import './App.css';
+import TopMenu from './components/TopMenu';
 
 function App() {
   return (
     <div className="App">
-      123
+      <TopMenu />
     </div>
   );
 }

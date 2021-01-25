@@ -1,0 +1,73 @@
+/* top nav */
+.top-nav {
+  padding: 10px 100px;
+  color: white;
+  font-size: 13px;
+}
+.top-nav i {
+  margin-left: 15px;
+}
+.top-nav-menu {
+  list-style: none;
+}
+.top-nav-menu li {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 20px;
+  display: inline-block;
+}
+.top-nav-menu img {
+  margin-right: 10px;
+}
+select {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+}
+select option[value="en"],
+select option[value="vi"] {
+  background-color: #1f2732;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+.top-nav {
+  width: 100vw;
+  height: 43px;
+  background-color: #1f2732;
+}
+nav.navbar {
+  filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, 0.07));
+  background-color: #ffffff;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+nav.nav-bar .navbar-collapse {
+  padding: 30px 0;
+  align-items: center;
+}
+nav.navbar .collapse .nav-item {
+  display: flex;
+  align-items: center;
+}
+nav.navbar .collapse .nav-item {
+  /* margin: 0 15px; */
+  margin-left: 15px;
+}
+nav.navbar .collapse .nav-item.nav-dot {
+  margin-left: 30px;
+}
+nav.navbar .collapse .nav-item .nav-link {
+  font-size: 15px;
+  color: #222222;
+  font-weight: 600;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  padding: 0;
+}
