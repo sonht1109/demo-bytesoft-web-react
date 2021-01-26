@@ -1,14 +1,41 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { news } from './news'
 import verticalLine from "../../assets/img/vertical_line3.png"
 import './style.css'
 import { wowInit } from '../wow';
+import {
+    Carousel,
+    CarouselItem,
+    CarouselControl,
+    CarouselIndicators,
+} from 'reactstrap';
+
 
 export default function News() {
 
     useEffect(() => {
         wowInit()
     }, [])
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [animating, setAnimating] = useState(false);
+
+    const next = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === news.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const previous = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ? news.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+    }
+
+    const goToIndex = (newIndex) => {
+        if (animating) return;
+        setActiveIndex(newIndex);
+    }
 
     const newsItem = (news, index) => {
         return (
@@ -36,7 +63,29 @@ export default function News() {
             <div className="news-container wow slideInLeft">
                 {news.map((news, index) => newsItem(news, index))}
             </div>
-            <img src={verticalLine} alt="" className="vertical wow fadeInDown" />
+            {/* news slide */}
+            <div className="news-slide-container">
+                <Carousel
+                    activeIndex={activeIndex}
+                    next={next}
+                    previous={previous}
+                >
+                    <CarouselIndicators items={news} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                    {news.map((news, index) => {
+                        return (
+                            <CarouselItem
+                                key={"news" + index}
+                                onExiting={() => setAnimating(true)}
+                                onExited={() => setAnimating(false)}>
+                                    {newsItem(news, index)}
+                            </CarouselItem>
+                        )
+                    })}
+                    <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                    <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+                </Carousel>
+            </div>
+            <img src={verticalLine} alt="" className="vertical news-vertical-2  wow fadeInDown" />
         </div>
     )
 }

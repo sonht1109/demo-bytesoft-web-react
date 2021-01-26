@@ -55,7 +55,7 @@ export default function Service() {
         </div>
         <div className="service-block">
           <Container className="d-flex justify-content-center align-items-center p-0">
-            <Row>
+            <Row style={{width: "100%"}}>
               <Col xl="5" className="left-block align-self-center wow fadeInLeft">
                 {
                   services.map((item, index) => {

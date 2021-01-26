@@ -6,6 +6,9 @@
   flex-direction: column;
   padding: 0 100px;
 }
+.why .container{
+  width: 100%;
+}
 .why .why-detail {
   max-width: 1200px;
   max-width: auto;
@@ -62,4 +65,93 @@
 }
 .why-item .why-item-title {
   margin-bottom: 30px;
+}
+@media(max-width: 991px){
+  .why .why-detail .container .col-lg-4 .why-item {
+    border: 1px dashed var(--main-green);
+    padding: 20px;
+  }
+  .why .why-detail .container .col-lg-4:nth-child(1) .why-item,
+  .why .why-detail .container .col-lg-4:nth-child(3) .why-item {
+    justify-content: flex-start;
+  }
+  .why
+    .why-detail
+    .container
+    .col-lg-4:nth-child(1)
+    .why-item:nth-child(1)
+    img,
+  .why
+    .why-detail
+    .container
+    .col-lg-4:nth-child(3)
+    .why-item:nth-child(1)
+    img {
+    position: static !important;
+    margin-right: 20px;
+  }
+  .why
+    .why-detail
+    .container
+    .col-lg-4:nth-child(1)
+    .why-item:nth-child(2)
+    img,
+  .why
+    .why-detail
+    .container
+    .col-lg-4:nth-child(3)
+    .why-item:nth-child(2)
+    img {
+    position: static !important;
+    margin-left: 20px;
+  }
+  .why .why-detail .container .col-lg-4:nth-child(1) .why-item {
+    margin-right: 0;
+  }
+  .why .why-detail .container .col-lg-4:nth-child(3) .why-item {
+    margin-left: 0;
+  }
+  .why-item .why-item-title {
+    margin-bottom: 15px;
+    justify-content: center;
+  }
+}
+@media(max-width: 768px){
+  .why {
+    padding: 0 40px;
+  }
+  .why .why-title {
+    margin-top: 100px;
+  }
+  .why .why-title p {
+    font-size: 24px;
+  }
+  .why .why-title span {
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+}
+@media(max-width: 480px){
+  .why,
+  .service-content .top-content,
+  .service-block {
+    padding: 0 20px !important;
+  }
+  .why .why-title p {
+    font-size: 20px;
+  }
+  .why .why-title span {
+    margin-bottom: 20px;
+  }
+  .why .why-title span,
+  .why .why-detail .container .col-lg-4:nth-child(1) .why-item p,
+  .why .why-detail .container .col-lg-4:nth-child(3) .why-item p {
+    font-size: 12px;
+  }
+  .why .why-detail .container .col-lg-4:nth-child(1) .why-item span,
+  .why .why-detail .container .col-lg-4:nth-child(3) .why-item span {
+    font-size: 14px;
+  }
 }

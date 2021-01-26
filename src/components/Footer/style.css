@@ -56,8 +56,66 @@
 .top-nav a svg {
   transition: 0.2s;
 }
-.social a:hover svg,
-.top-nav a:hover svg {
+.social a:hover svg{
   color: white;
   transform: scale(1.2);
+}
+@media(max-width: 1199px ){
+  .footer-wrapper{
+    padding: 60px 40px 30px 40px;
+  }
+  .footer .contact{
+    grid-gap: 20px;
+  }
+  .footer .contact .contact-col p {
+    margin: 0;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .footer .contact .contact-col .col-title{
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+@media(max-width: 1024px){
+  .footer{
+    padding-top: 80px;
+  }
+  .footer .logo{
+    margin-bottom: 20px;
+  }
+  .footer .contact{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media(max-width: 768px){
+  .footer{
+    padding-top: 60px;
+    margin-top: -30px;
+  }
+  .footer .logo img{
+    width: 150px;
+    height: auto;
+  }
+  .footer .contact{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .footer .contact{
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr;
+  }
+  .footer .contact .social{
+    max-width: 60%;
+  }
+}
+@media(max-width: 480px){
+  .footer{
+    padding-top: 40px;
+  }
+  .footer .contact{
+    padding: 0 20px 20px;
+  }
 }

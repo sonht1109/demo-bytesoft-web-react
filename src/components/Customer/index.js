@@ -49,7 +49,9 @@ export default function Customer() {
           </div>
           <div className="slide-caption">
             <p className="text-center">{item.content}</p>
-            <p className="text-center text-uppercase">{item.name} - {item.job}</p>
+            <p className="text-center text-uppercase">
+              {item.name} - {item.job}
+            </p>
           </div>
         </div>
       </CarouselItem>
@@ -60,7 +62,7 @@ export default function Customer() {
   return (
     <div className="customer wrapper d-flex justify-content-center align-items-center flex-column">
       <img src={verticalLine} alt="" className="vertical wow fadeInDown" />
-      <p className="text-center title">Ý KIẾN PHẢN HỒI TỪ KHÁCH HÀNG</p>
+      <p className="title text-center">Ý KIẾN PHẢN HỒI TỪ KHÁCH HÀNG</p>
       <Carousel
         activeIndex={activeIndex}
         next={next}

@@ -43,3 +43,38 @@
   color: #fefefe;
   font-weight: 600;
 }
+@media(max-width: 991px){
+  .hiring {
+    padding: 40px;
+    margin-top: -60px;
+    padding-bottom: 80px;
+  }
+  .hiring-content {
+    width: 80% !important;
+  }
+  .hiring p {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .hiring .hiring-detail .hiring-content button {
+    width: 160px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
+@media(max-width: 480px){
+  .hiring {
+    padding: 20px;
+    padding-bottom: 60px;
+  }
+  .hiring-content {
+    width: 100% !important;
+  }
+  .hiring-content .content-item{
+    margin: 0!important;
+  }
+  .hiring .hiring-detail .hiring-content .content-item span {
+    font-size: 12px;
+  }
+}

@@ -25,14 +25,14 @@ export default function Products() {
         breakpoint: 680,
         settings: {
           slidesToShow: 1,
-          centerPadding: "60px"
+          centerPadding: "100px"
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          centerPadding: "60px"
+          centerPadding: "80px"
         }
       },
     ]
@@ -42,12 +42,12 @@ export default function Products() {
     <div className="products product-text d-flex justify-content-center align-items-center flex-column wrapper">
       <img src={verticalLine} className="wow fadeInDown" />
       <p className="title text-center">NHÓM SẢN PHẨM BYTESOFT</p>
-      <Slider {...settings} className="wow slideInLeft">
+      <Slider {...settings}>
         {products.map((product, index) => {
           return (
             <div key={"product" + index} >
               <img
-                className="product"
+                className="product wow zoomIn"
                 src={product.img}
                 alt=""
               />

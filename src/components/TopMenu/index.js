@@ -3,7 +3,8 @@ import './style.css'
 import dotPng from '../../assets/img/top-nav-dot.png'
 import logo from '../../assets/img/logo.png'
 import { TiSocialFacebook, TiSocialTwitter, TiSocialYoutube, TiSocialInstagram } from 'react-icons/ti'
-import {Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink} from 'reactstrap'
+import {IoMenu} from 'react-icons/io5'
+import {Navbar, NavbarBrand, Collapse, Nav, NavItem, NavLink} from 'reactstrap'
 import dot from '../../assets/img/dot.png'
 
 export default function TopMenu() {
@@ -57,29 +58,30 @@ export default function TopMenu() {
         <NavbarBrand href='#'>
           <img src={logo} alt="" />
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
+        {/* <NavbarToggler onClick={toggle} /> */}
+        <IoMenu color="black" size={20} onClick={toggle} className="d-md-none d-block" />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="d-flex ml-auto">
             <NavItem>
               <NavLink href="#">TRANG CHỦ</NavLink>
             </NavItem>
-            <NavItem><img src={dot} /></NavItem>
+            <NavItem className="nav-dot"><img src={dot} /></NavItem>
             <NavItem>
               <NavLink href="#">VỀ CHÚNG TÔI</NavLink>
             </NavItem>
-            <NavItem><img src={dot} /></NavItem>
+            <NavItem className="nav-dot"><img src={dot} /></NavItem>
             <NavItem>
               <NavLink href="#">DỊCH VỤ</NavLink>
             </NavItem>
-            <NavItem><img src={dot} /></NavItem>
+            <NavItem className="nav-dot"><img src={dot} /></NavItem>
             <NavItem>
               <NavLink href="#">SẢN PHẨM</NavLink>
             </NavItem>
-            <NavItem><img src={dot} /></NavItem>
+            <NavItem className="nav-dot"><img src={dot} /></NavItem>
             <NavItem>
               <NavLink href="#">TIN TỨC</NavLink>
             </NavItem>
-            <NavItem><img src={dot} /></NavItem>
+            <NavItem className="nav-dot"><img src={dot} /></NavItem>
             <NavItem>
               <NavLink href="#">LIÊN HỆ</NavLink>
             </NavItem>

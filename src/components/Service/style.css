@@ -165,3 +165,98 @@
   margin-bottom: 15px;
   display: inline-block;
 }
+@media(max-width: 1199px){
+  .service .service-block{
+    padding: 0 80px;
+  }
+  .service .service-block .container-fluid {
+    flex-direction: column;
+  }
+  .service .service-block .left-block {
+    position: static;
+    margin: 20px 0;
+  }
+  .service .right-block .right-block-wrapper {
+    width: 100% !important;
+    padding: 0 40px !important;
+  }
+}
+@media(max-width: 1024px){
+  .service .service-content .top-content {
+    padding: 0 80px;
+  }
+  .service {
+    padding: 100px 0;
+  }
+}
+@media(max-width: 991px){
+  .service .service-block{
+    padding: 0 40px;
+  }
+  .service .service-block .left-block {
+    position: static;
+    margin: 20px 0;
+  }
+  .service .right-block .right-block-wrapper {
+    width: 100% !important;
+    padding: 0 40px !important;
+  }
+  .service .service-content .top-content div {
+    font-size: 24px;
+  }
+  .service .service-content .top-content{
+    padding: 0 40px;
+  }
+  .service .service-content .top-content span {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .service .right-block .right-block-wrapper img {
+    display: none;
+  }
+  .service .service-block .left-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 10px;
+  }
+  .service .service-block .left-block .block-item {
+    margin: 10px;
+  }
+  .service .service-block .left-block .block-item .block-img {
+    width: 80px;
+    height: 80px;
+  }
+  .service .service-block .left-block .block-item span {
+    font-size: 14px;
+  }
+  .service {
+    padding: 80px 0;
+  }
+}
+@media(max-width: 480px){
+  .service .service-block .right-block {
+    display: none;
+  }
+  .service .service-content .top-content div {
+    font-size: 20px;
+  }
+  .service .service-content .top-content span {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .service-content .top-content,
+  .service-block {
+    padding: 0 20px !important;
+  }
+  .service-block .left-block .block-item span{
+    font-size: 12px!important;
+  }
+  .service-block .left-block .block-img{
+    width: 60px!important;
+    height: 60px!important;
+  }
+  .service-block .left-block .block-img img{
+    width: 30px!important;
+    height: 30px!important;
+  }
+}
