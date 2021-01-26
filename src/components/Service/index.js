@@ -1,22 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { services } from './services'
 import { Container, Row, Col } from 'reactstrap'
 import './style.css'
+import { wowInit } from '../wow'
 
 export default function Service() {
 
   const [index, setIndex] = useState(0)
 
+  useEffect(() => {
+    wowInit()
+  }, [])
+
   const rightBlockItem = (item) => {
     return (
       <div className="right-block-wrapper">
         <p>{item.name}</p>
-        <span style={{lineHeight: "24px"}}>{item.content[0]}</span>
+        <span style={{ lineHeight: "24px" }}>{item.content[0]}</span>
         <div className="service-detail">
-          <span style={{lineHeight: "24px"}}>{item.content[1]}</span>
-          <img src={item.contentImg} alt="" style={{marginLeft: 20}} />
+          <span style={{ lineHeight: "24px" }}>{item.content[1]}</span>
+          <img src={item.contentImg} alt="" style={{ marginLeft: 20 }} />
         </div>
-        <span style={{lineHeight: "24px"}}>{item.content[2]}</span>
+        <span style={{ lineHeight: "24px" }}>{item.content[2]}</span>
         <br />
         <a href="#" className="read-more">XEM THÊM</a>
       </div>
@@ -51,7 +56,7 @@ export default function Service() {
         <div className="service-block">
           <Container className="d-flex justify-content-center align-items-center p-0">
             <Row>
-              <Col xl="5" className="left-block align-self-center">
+              <Col xl="5" className="left-block align-self-center wow fadeInLeft">
                 {
                   services.map((item, index) => {
                     return leftBlockItem(item, index)
@@ -59,7 +64,7 @@ export default function Service() {
                 }
               </Col>
 
-              <Col xl="7" className="right-block">
+              <Col xl="7" className="right-block wow fadeInDown">
                 {rightBlockItem(services[index])}
               </Col>
             </Row>

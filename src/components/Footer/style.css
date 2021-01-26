@@ -1,0 +1,63 @@
+.footer {
+  background-image: url("../../assets/img/footer-bg.png");
+  background-size: 107%;
+  background-position: top;
+  margin-top: -80px;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+.footer .logo {
+  margin-bottom: 40px;
+}
+.footer .contact {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #214140;
+  padding: 0 100px;
+  padding-bottom: 40px;
+}
+.footer .contact .contact-col .col-title {
+  font-size: 14px;
+  line-height: 28px;
+  color: #f4f4f4;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.footer .contact .contact-col .col-title img {
+  left: -20px;
+}
+.footer .contact .contact-col p {
+  font-size: 14px;
+  line-height: 28px;
+  color: #cccccc;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin: 5px 0 5px 20px;
+}
+.social {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  margin-left: 20px;
+}
+.social svg{
+  color: #cccccc;
+  margin: 5px 0;
+  transition: 0.2s;
+}
+.social a {
+  display: inline-block;
+}
+.top-nav a svg {
+  transition: 0.2s;
+}
+.social a:hover svg,
+.top-nav a:hover svg {
+  color: white;
+  transform: scale(1.2);
+}

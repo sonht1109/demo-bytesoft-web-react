@@ -7,6 +7,7 @@ import Products from './components/Products/index';
 import Customer from './components/Customer/index';
 import News from './components/News/index';
 import Hiring from './components/Hiring/index';
+import Footer from './components/Footer/index';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Customer />
       <News />
       <Hiring />
+      <Footer />
     </div>
   );
 }

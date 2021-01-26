@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import whyIcon from '../../assets/img/why-icon.png'
 import centerPhone from '../../assets/img/iphone-services.png'
 import { Container, Row, Col } from 'reactstrap'
 import './style.css'
+import { wowInit } from '../wow'
 
 export default function Why() {
+
+  useEffect(() => {
+    wowInit()
+  }, [])
+
   return (
     <div className="why d-flex justify-content-center align-items-center wrapper">
       <div className="why-title d-flex flex-column justify-content-center">
@@ -43,7 +49,7 @@ export default function Why() {
               <img src={centerPhone} alt="" />
             </Col>
             <Col lg="4" className="p-0 d-flex flex-column justify-content-center">
-            <div className="why-item wow fadeInRight">
+              <div className="why-item wow fadeInRight">
                 <div className="why-item-title d-flex position-relative justify-content-start">
                   <img src={whyIcon} className="position-absolute" />
                   <span>Bức tường bảo mật</span>

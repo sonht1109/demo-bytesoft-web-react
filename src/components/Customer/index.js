@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
 import { customers } from './customers';
 import {
@@ -8,11 +8,16 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 import verticalLine from '../../assets/img/vertical_line2.png'
+import { wowInit } from '../wow';
 
 export default function Customer() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
+
+  useEffect(() => {
+    wowInit()
+  }, [])
 
   const next = () => {
     if (animating) return;
@@ -39,12 +44,12 @@ export default function Customer() {
         key={"customer" + index}
       >
         <div className="slide-item position-relative">
-          <div class="slide-img d-flex justify-content-center position-absolute">
+          <div className="slide-img d-flex justify-content-center position-absolute">
             <img src={item.avt} alt="" />
           </div>
-          <div class="slide-caption">
-            <p class="text-center">{item.content}</p>
-            <p class="text-center text-uppercase">{item.name} - {item.job}</p>
+          <div className="slide-caption">
+            <p className="text-center">{item.content}</p>
+            <p className="text-center text-uppercase">{item.name} - {item.job}</p>
           </div>
         </div>
       </CarouselItem>
@@ -53,9 +58,9 @@ export default function Customer() {
 
 
   return (
-    <div class="customer wrapper d-flex justify-content-center align-items-center flex-column">
-      <img src={verticalLine} alt="" class="vertical wow fadeInDown" />
-      <p class="text-center title">Ý KIẾN PHẢN HỒI TỪ KHÁCH HÀNG</p>
+    <div className="customer wrapper d-flex justify-content-center align-items-center flex-column">
+      <img src={verticalLine} alt="" className="vertical wow fadeInDown" />
+      <p className="text-center title">Ý KIẾN PHẢN HỒI TỪ KHÁCH HÀNG</p>
       <Carousel
         activeIndex={activeIndex}
         next={next}
@@ -66,7 +71,7 @@ export default function Customer() {
         <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
         <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
       </Carousel>
-      <img src={verticalLine} alt="" class="vertical wow fadeInDown" />
+      <img src={verticalLine} alt="" className="vertical wow fadeInDown" />
     </div>
   )
 }
