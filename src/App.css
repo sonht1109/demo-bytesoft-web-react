@@ -1,4 +1,4 @@
-*{padding: 0; margin: 0; font-family: Open Sans;}
+*{padding: 0; margin: 0; font-family: Open Sans; user-select: none;}
 
 button, button:focus{
   outline: none;

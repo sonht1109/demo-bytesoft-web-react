@@ -1,0 +1,96 @@
+.customer {
+  background-image: url("../../assets/img/customer-bg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 10px 100px 60px 100px;
+}
+.customer > p {
+  font-synthesis: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 110px;
+  font-size: 36px;
+  margin-top: 25px;
+}
+.customer .carousel {
+  width: 100%;
+  margin-bottom: 70px;
+}
+.customer .carousel .carousel-item {
+  width: 100%;
+}
+.customer .carousel .carousel-item .slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  background-color: black;
+  margin: auto;
+  padding: 85px 20px 20px 20px;
+}
+.customer .carousel .carousel-item .slide-item .slide-img {
+  border-radius: 100%;
+  border: 2px solid white;
+  width: 115px;
+  height: 115px;
+  overflow: hidden;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.customer .carousel .carousel-item .slide-item img {
+  width: auto;
+  height: 100%;
+}
+.customer .carousel .carousel-item .slide-item .slide-caption {
+  color: white;
+}
+.customer .carousel .carousel-item .slide-item .slide-caption p:nth-child(1) {
+  font-size: 13px;
+  line-height: 19px;
+  color: #fefefe;
+  margin-bottom: 0;
+}
+.customer .carousel .carousel-item .slide-item .slide-caption p:nth-child(2) {
+  font-size: 13px;
+  line-height: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.carousel-inner {
+  overflow: visible !important;
+}
+.carousel-indicators {
+  bottom: -70px !important;
+}
+.carousel-indicators li.active {
+  background-color: var(--main-green) !important;
+}
+.carousel-indicators li,
+.carousel-indicators li:not(.active) {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+  background-color: white !important;
+  cursor: pointer;
+}
+a.carousel-control-prev,
+a.carousel-control-next {
+  width: auto !important;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #fff !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.carousel-control-next-icon {
+  background-image: url("../../assets//img/next.png") !important;
+}
+.carousel-control-prev-icon {
+  background-image: url("../../assets//img/prev.png") !important;
+}
